@@ -10,3 +10,15 @@ C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\Tools.d
 C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\refint\Tools.dll
 C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\Tools.pdb
 C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\ref\Tools.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\Tools.deps.json
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\Tools.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\Tools.pdb
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\Tools.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\Tools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\Tools.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\Tools.AssemblyInfo.cs
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\Tools.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\Tools.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\refint\Tools.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\Tools.pdb
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\Tools\obj\Debug\ref\Tools.dll

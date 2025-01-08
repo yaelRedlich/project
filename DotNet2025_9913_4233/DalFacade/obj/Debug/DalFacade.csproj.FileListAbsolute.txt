@@ -22,3 +22,15 @@ C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\Dal
 C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\refint\DalFacade.dll
 C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\DalFacade.pdb
 C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\ref\DalFacade.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\DalFacade.deps.json
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\DalFacade.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\DalFacade.pdb
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\DalFacade.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\DalFacade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\DalFacade.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\DalFacade.AssemblyInfo.cs
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\DalFacade.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\DalFacade.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\refint\DalFacade.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\DalFacade.pdb
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalFacade\obj\Debug\ref\DalFacade.dll

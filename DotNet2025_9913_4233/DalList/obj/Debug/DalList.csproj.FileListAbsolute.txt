@@ -24,3 +24,11 @@ C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalLi
 C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\refint\DalList.dll
 C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.pdb
 C:\Users\user1\Desktop\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\ref\DalList.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.AssemblyInfo.cs
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\refint\DalList.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.pdb

@@ -1,16 +1,17 @@
 ﻿using DO;
 using DalApi;
-
 namespace Dal;
 
 internal class ProductImplementation:Iproduct
 {
     public int Create(Product item)
     {
-        if (DataSource.products.Any(product => product._id == item._id))
+        if (DataSource.products.Any(product => product._id == item._id)) { 
             throw new DalIdExist("⚠️ שגיאה: לא ניתן להוסיף את המוצר. מוצר עם אותם פרטים כבר קיים במערכת.\r\nאנא בדוק את הנתונים ונסה שוב או צור קשר עם התמיכה הטכנית.");
-
+        }
         DataSource.products.Add(item);
+        LogManager.writeToLog("DalList", MethodBase.GetCurrentMethod().DeclaringType.FullName, "המוצר נוצר בהצלחה");
+
         return item._id;
 
     }
@@ -18,16 +19,24 @@ internal class ProductImplementation:Iproduct
     {
         Product p = DataSource.products.FirstOrDefault(product => product._id == id);
         if (p != null)
+        {
+            LogManager.writeToLog("DalList", MethodBase.GetCurrentMethod().DeclaringType.FullName, "המוצר נקרא בהצלחה");
+
             return p;
+
+        }
         else
-        throw new DalNotFoundId("מוצר זה לא קיים");
+            throw new DalNotFoundId("מוצר זה לא קיים");
     }
   public  Product? Read(Func<Product, bool> filter)
     {
+        LogManager.writeToLog("DalList", MethodBase.GetCurrentMethod().DeclaringType.FullName, "המוצר נקרא בהצלחה");
         return DataSource.products.FirstOrDefault(filter);
     }
   public List<Product> ReadAll(Func<Product, bool>? filter = null)
     {
+        LogManager.writeToLog("DalList", MethodBase.GetCurrentMethod().DeclaringType.FullName, "המוצר נקרא בהצלחה");
+
         if (filter == null)
             return DataSource.products;
         return DataSource.products.Where((c) => filter(c)).ToList();
@@ -38,6 +47,8 @@ internal class ProductImplementation:Iproduct
         {
             Delete(item._id);
             Create(item);
+            LogManager.writeToLog("DalList", MethodBase.GetCurrentMethod().DeclaringType.FullName, "המוצר עודכן בהצלחה");
+
         }
     }
     public void Delete(int id)
@@ -45,6 +56,8 @@ internal class ProductImplementation:Iproduct
         if (Read(id) != null)
         {
             DataSource.products.Remove(Read(id));
+            LogManager.writeToLog("DalList", MethodBase.GetCurrentMethod().DeclaringType.FullName, "המוצר נמחק בהצלחה");
+
         }
     }
 }

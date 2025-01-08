@@ -12,19 +12,6 @@
           "bin/placeholder/DalFacade.dll": {}
         }
       },
-      "DalList/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "DalFacade": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/DalList.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DalList.dll": {}
-        }
-      },
       "Tools/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -43,11 +30,6 @@
       "path": "../DalFacade/DalFacade.csproj",
       "msbuildProject": "../DalFacade/DalFacade.csproj"
     },
-    "DalList/1.0.0": {
-      "type": "project",
-      "path": "../DalList/DalList.csproj",
-      "msbuildProject": "../DalList/DalList.csproj"
-    },
     "Tools/1.0.0": {
       "type": "project",
       "path": "../Tools/Tools.csproj",
@@ -57,7 +39,6 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "DalFacade >= 1.0.0",
-      "DalList >= 1.0.0",
       "Tools >= 1.0.0"
     ]
   },
@@ -67,11 +48,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user1\\Desktop\\פרויקט\\DotNet2025_9913_4233\\DalTest\\DalTest.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\C#\\פרויקט\\DotNet2025_9913_4233\\DalTest\\DalTest.csproj",
       "projectName": "DalTest",
-      "projectPath": "C:\\Users\\user1\\Desktop\\פרויקט\\DotNet2025_9913_4233\\DalTest\\DalTest.csproj",
+      "projectPath": "C:\\Users\\user1\\Desktop\\C#\\פרויקט\\DotNet2025_9913_4233\\DalTest\\DalTest.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user1\\Desktop\\פרויקט\\DotNet2025_9913_4233\\DalTest\\obj\\",
+      "outputPath": "C:\\Users\\user1\\Desktop\\C#\\פרויקט\\DotNet2025_9913_4233\\DalTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -88,14 +69,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\user1\\Desktop\\פרויקט\\DotNet2025_9913_4233\\DalFacade\\DalFacade.csproj": {
-              "projectPath": "C:\\Users\\user1\\Desktop\\פרויקט\\DotNet2025_9913_4233\\DalFacade\\DalFacade.csproj"
+            "C:\\Users\\user1\\Desktop\\C#\\פרויקט\\DotNet2025_9913_4233\\DalFacade\\DalFacade.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\C#\\פרויקט\\DotNet2025_9913_4233\\DalFacade\\DalFacade.csproj"
             },
-            "C:\\Users\\user1\\Desktop\\פרויקט\\DotNet2025_9913_4233\\DalList\\DalList.csproj": {
-              "projectPath": "C:\\Users\\user1\\Desktop\\פרויקט\\DotNet2025_9913_4233\\DalList\\DalList.csproj"
-            },
-            "C:\\Users\\user1\\Desktop\\פרויקט\\DotNet2025_9913_4233\\Tools\\Tools.csproj": {
-              "projectPath": "C:\\Users\\user1\\Desktop\\פרויקט\\DotNet2025_9913_4233\\Tools\\Tools.csproj"
+            "C:\\Users\\user1\\Desktop\\C#\\פרויקט\\DotNet2025_9913_4233\\Tools\\Tools.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\C#\\פרויקט\\DotNet2025_9913_4233\\Tools\\Tools.csproj"
             }
           }
         }

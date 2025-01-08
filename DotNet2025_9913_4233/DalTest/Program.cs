@@ -1,5 +1,4 @@
-﻿using Dal;
-using DalApi;
+﻿using DalApi;
 using DalTest;
 using DO;
 using System.Numerics;
@@ -8,7 +7,7 @@ using Tools;
 
 public class Program
 {
-    private static IDal s_dal = new DalListClass();
+    private static IDal s_dal = DalApi.Factory.Get;
 
     public static void showMenu()
     {
@@ -204,7 +203,7 @@ public class Program
 
     public static void Main(string[] args)
     {
-        Initialization.initialize(s_dal);
+        Initialization.initialize();
         try
         {
             showMenu();
