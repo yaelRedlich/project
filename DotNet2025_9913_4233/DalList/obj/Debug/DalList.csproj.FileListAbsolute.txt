@@ -32,3 +32,8 @@ C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\Da
 C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.dll
 C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\refint\DalList.dll
 C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.pdb
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\DalList.deps.json
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\DalList.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\DalList.pdb
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\DalList.csproj.CopyComplete
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\DalList\obj\Debug\ref\DalList.dll

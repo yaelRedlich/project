@@ -22,8 +22,8 @@ internal class CustomerImplementation:Icustomer
         Customer c=DataSource.customers.FirstOrDefault(item => item._idCard == id);
         if (c != null)
         {
-            return c;
             LogManager.writeToLog("DalList", MethodBase.GetCurrentMethod().DeclaringType.FullName, "הלקוח נקרא בהצלחה");
+            return c;
 
         }
         else
@@ -31,6 +31,7 @@ internal class CustomerImplementation:Icustomer
     }
    public Customer? Read(Func<Customer, bool> filter)
     {
+        
         LogManager.writeToLog("DalList", MethodBase.GetCurrentMethod().DeclaringType.FullName, "המוצר נקרא בהצלחה");
         return DataSource.customers.FirstOrDefault(filter);
 

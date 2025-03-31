@@ -1,9 +1,5 @@
 ﻿
-
-
 namespace DO;
-
-
 public record Product
 (
 
@@ -15,11 +11,8 @@ public record Product
 )
 
 {
-
-    public Product() : this(0, "",new CategoryName() , 0.0, 0)
+    public Product(int _id) : this(0, "", new CategoryName(), 0.0, 0)
     {
-       
-
 
     }
 }

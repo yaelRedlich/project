@@ -8,4 +8,4 @@ using DO;
 public interface Iproduct: ICrud<Product>
 {
    
-}
+} 

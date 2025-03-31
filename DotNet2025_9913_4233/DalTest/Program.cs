@@ -8,7 +8,6 @@ using Tools;
 public class Program
 {
     private static IDal s_dal = DalApi.Factory.Get;
-
     public static void showMenu()
     {
         int entity=0;

@@ -1,6 +1,8 @@
 ﻿using DO;
 using DalApi;
-namespace Dal;
+using System.Reflection;
+using Tools;
+using Dal;
 
 internal class ProductImplementation:Iproduct
 {

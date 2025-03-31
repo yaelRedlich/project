@@ -1,0 +1,16 @@
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\BlTest.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\BlTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\BlTest.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\BlTest.AssemblyInfo.cs
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\BlTest.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\BlTest.exe
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\BlTest.deps.json
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\BlTest.runtimeconfig.json
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\BlTest.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\bin\BlTest.pdb
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\BlTest.csproj.CopyComplete
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\BlTest.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\refint\BlTest.dll
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\BlTest.pdb
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\BlTest.genruntimeconfig.cache
+C:\Users\user1\Desktop\C#\פרויקט\DotNet2025_9913_4233\BlTest\obj\Debug\ref\BlTest.dll

@@ -1,5 +1,4 @@
-﻿//using DalApi;
-using System.Reflection;
+﻿using System.Reflection;
 using static DalApi.DalConfig;
 namespace DalApi;
 public static class Factory

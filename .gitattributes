@@ -1,2 +1,51 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Visual Studio specific
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.log
+*.lib
+*.nupkg
+*.snupkg
+*.exp
+*.iobj
+*.ipdb
+*.db
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# ASP.NET
+appsettings.json
+appsettings.*.json
+
+# Entity Framework
+*.mdf
+*.ldf
+
+# Logs
+logs/
+*.log
+
+# Others
+*.tmp
+*.bak
+Thumbs.db
+Desktop.ini
