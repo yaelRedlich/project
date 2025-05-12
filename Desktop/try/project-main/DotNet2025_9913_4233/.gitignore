@@ -1,0 +1,48 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+out/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# XML backup/temp files
+*.xml~
+*.bak
+*.tmp
+
+# UI artifacts (if using web frontend)
+node_modules/
+dist/
+.env
+.env.*
+
+# System files
+Thumbs.db
+Desktop.ini
+.DS_Store

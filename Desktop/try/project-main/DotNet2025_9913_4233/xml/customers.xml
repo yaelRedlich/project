@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Customer>
+    <IdCard>327804233</IdCard>
+    <Phone>0556747158</Phone>
+    <Address>maaril 12</Address>
+    <CustomerName>yael</CustomerName>
+  </Customer>
+  <Customer>
+    <IdCard>327804236</IdCard>
+    <Phone>0556781278</Phone>
+    <Address>noda </Address>
+    <CustomerName>suri</CustomerName>
+  </Customer>
+  <Customer>
+    <IdCard>32780434</IdCard>
+    <Phone>0504101456</Phone>
+    <Address>mermi sade</Address>
+    <CustomerName>hadasa</CustomerName>
+  </Customer>
+  <Customer>
+    <IdCard>327804233</IdCard>
+    <Phone>0556747158</Phone>
+    <Address>maaril</Address>
+    <CustomerName>yael</CustomerName>
+  </Customer>
+  <Customer>
+    <IdCard>327804235</IdCard>
+    <Phone>0534161926</Phone>
+    <Address>chazon david</Address>
+    <CustomerName>tami</CustomerName>
+  </Customer>
+  <Customer>
+    <IdCard>327804236</IdCard>
+    <Phone>0556781278</Phone>
+    <Address>noda </Address>
+    <CustomerName>suri</CustomerName>
+  </Customer>
+  <Customer>
+    <IdCard>327804233</IdCard>
+    <Phone>0556747158</Phone>
+    <Address>maaril</Address>
+    <CustomerName>yael</CustomerName>
+  </Customer>
+  <Customer>
+    <IdCard>327804235</IdCard>
+    <Phone>0534161926</Phone>
+    <Address>chazon david</Address>
+    <CustomerName>tami</CustomerName>
+  </Customer>
+  <Customer>
+    <IdCard>327804236</IdCard>
+    <Phone>0556781278</Phone>
+    <Address>noda </Address>
+    <CustomerName>suri</CustomerName>
+  </Customer>
+</ArrayOfCustomer>
