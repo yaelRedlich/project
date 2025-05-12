@@ -1,20 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.ComponentModel.DataAnnotations;
 
 namespace DO
 {
-    public record Customer(int _idCard, string _phone, string _address, string _customerName)
+    [Serializable]
+
+    public record Customer
     {
+        [Key]
+        public int IdCard { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
+        public string CustomerName { get; set; }
 
-        public Customer():this(0,"","","")
+        public Customer() { }
+
+        public Customer(int _idCard, string _phone, string _address, string _customerName)
         {
-
+            IdCard = _idCard;
+            Phone = _phone;
+            Address = _address;
+            CustomerName = _customerName;
         }
-        
-
-
     }
 }

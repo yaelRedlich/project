@@ -1,10 +1,13 @@
-﻿
-namespace DalApi;
-using DO;
+﻿using DO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-public interface Icustomer: ICrud<Customer>
+namespace DalApi
 {
-   
-
+    public interface Icustomer : ICrud<Customer>
+    {
+    }
 }

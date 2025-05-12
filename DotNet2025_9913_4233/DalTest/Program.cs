@@ -202,6 +202,8 @@ public class Program
 
     public static void Main(string[] args)
     {
+        AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableAuthenticationProvider", true);
+
         Initialization.initialize();
         try
         {

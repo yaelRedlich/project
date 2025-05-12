@@ -4,10 +4,10 @@ namespace DO;
 
 public   enum  CategoryName
 {
-    CLASSIC_FRAGRANCES,//ניחוחות קלאסיים
-    PREMIUM_SERIES,//סט פרמיום
-    GIFT_BOXES,//מארזי מתנה
-    LIFESTYLE,// לייף סטייל
-    WINTER_COLLECTION//קולקצית חורף
+    Fruits = 0,
+    Vegetables = 1,
+    Fish = 2,
+    Meat = 3,
+    Dairy = 4
 
 }

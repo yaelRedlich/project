@@ -2,11 +2,7 @@
 using BO;
 using DalApi;
 using DO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BlIimplemetation
 {
@@ -21,10 +17,13 @@ namespace BlIimplemetation
                 return _dal.Customer.Create(new DO.Customer(item._idCard, item._phone, item._address, item._customerName));
 
             }
+            catch (DO.DalProductIdExist ex)
+            {
+                throw new BlProductIdExist("The product is out of stock.", ex);
+            }
             catch (DO.DalIdExist ex)
             {
-                throw new BlIdExist("id doesnt exist" , ex);
-                throw new DalIdExist("id doesnt exist");
+                throw new BlIdExist("The ID already exists in the system.", ex);
             }
         }
         public  bool isExist(int id)
@@ -42,22 +41,25 @@ namespace BlIimplemetation
             DO.Customer c = _dal.Customer.Read(id);
             if (c == null)
                 return null;
-            return new BO.Customer(c._idCard, c._phone, c._address, c._customerName);
+            return new BO.Customer(c.IdCard, c.Phone, c.Address, c.CustomerName);
             }
-            catch (DO.DalIdExist ex)
+            catch (DO.DalNotFoundId ex)
             {
-                throw new BlIdExist("id doesnt exist", ex);
-                throw new DalIdExist("id doesnt exist");
+                throw new BlNotFoundId("The product is out of stock.", ex);
             }
         }
 
-        public  List<BO.Customer?>  ReadAll(Func<BO.Customer, bool>? filter=null)
+        public List<BO.Customer?> ReadAll(Func<BO.Customer, bool>? filter=null)
         {
             
                 List<DO.Customer?> c = _dal.Customer.ReadAll(); 
-                List<BO.Customer> ListCustomers =c.Select(c => new BO.Customer(c._idCard, c._phone, c._address, c._customerName))
+                List<BO.Customer> ListCustomers = c.Select(c => new BO.Customer(c.IdCard, c.Phone, c.Address, c.CustomerName))
                 .ToList();
-                if(filter != null)  
+            foreach (var item in ListCustomers)
+            {
+                Console.WriteLine(item);
+            }
+                if (filter == null)  
                     return ListCustomers; 
                 else
                     return ListCustomers.Where(filter).ToList();   
@@ -73,20 +75,14 @@ namespace BlIimplemetation
         {
             try
             {
-                _dal.Customer.Create(new DO.Customer(item._idCard, item._phone, item._address, item._customerName));
+                _dal.Customer.Update(new DO.Customer(item._idCard, item._phone, item._address, item._customerName));
 
             }
             catch(DalIdExist ex)
             {
-                throw new BlIdExist("id doesnt exist", ex);
-                throw new DalIdExist("id doesnt exist");
+                throw new BlIdExist("The product is out of stock.", ex);
             }
-            catch (DalNotFoundId ex)
-            {
-                throw new BlNotFoundId("not found id", ex);
-                throw new DalNotFoundId("not found id");
-
-            }
+          
         }
 
         public void Delete(int id)
@@ -95,10 +91,9 @@ namespace BlIimplemetation
             {
                 _dal.Customer.Delete(id);
             }
-            catch (DO.DalIdExist ex)
+            catch (DO.DalNotFoundId ex)
             {
-                throw new BlIdExist("id doesnt exist", ex);
-                throw new DalIdExist("id doesnt exist");
+                throw new BlNotFoundId("The product is out of stock.", ex);
             }
         }
     }

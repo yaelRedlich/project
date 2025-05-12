@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Xml.Serialization;
 using static DalApi.DalConfig;
 namespace DalApi;
 public static class Factory
@@ -9,9 +10,10 @@ public static class Factory
         {
             string dalType = s_dalName ?? throw new DalConfigException($"DAL name is not extracted from the configuration");
             string dal = s_dalPackages[dalType] ?? throw new DalConfigException($"Package for {dalType} is not found in packages list in dal-config.xml");
-
             try { Assembly.Load(dal ?? throw new DalConfigException($"Package {dal} is null")); }
-            catch (Exception ex) { throw new DalConfigException($"Failed to load {dal}.dll package", ex); }
+            catch (Exception ex) {
+                Console.WriteLine(dal);
+                throw new DalConfigException($"Failed to load {dal}.dll package ", ex); }
 
             Type type = Type.GetType($"Dal.{dal}, {dal}") ??
                 throw new DalConfigException($"Class Dal.{dal} was not found in {dal}.dll Package");

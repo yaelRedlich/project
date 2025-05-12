@@ -1,11 +1,14 @@
-﻿
+﻿using DO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace DalApi;
-using DO;
-
-
-public interface Iproduct: ICrud<Product>
+namespace DalApi
 {
-   
-} 
+    public interface Iproduct : ICrud<Product>
+    {
+
+    }
+}

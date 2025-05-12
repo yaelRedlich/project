@@ -10,7 +10,7 @@ namespace BO
     {
         public int _saleId;
         public int _quantityForSale;
-        public int _price;
+        public double _price;
         public bool IsSaleForAllCustomer;
         public SaleInProduct(int saleId, int quantityForSale, int price, bool isSaleForAllCustomer)
         {

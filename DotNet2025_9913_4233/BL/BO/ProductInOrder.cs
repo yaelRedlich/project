@@ -12,17 +12,17 @@ namespace BO
         public List<SaleInProduct> _saleList;
         public double _finalPrice;
 
-        public ProductInOrder(int productInOrderId, string productName, double basePrice, int quantity, List<SaleInProduct> saleList, double finalPrice)
+        public ProductInOrder(int productInOrderId, string productName, double basePrice, int quantity, List<SaleInProduct> saleList)
         {
             _productInOrderId = productInOrderId;
             _productName = productName;
             _basePrice = basePrice;
             _quantity = quantity;
             _saleList = saleList;
-            _finalPrice = finalPrice;
+            _finalPrice = basePrice*quantity;
         }
 
-        public ProductInOrder() : this(0, "", 0.0, 0, new List<SaleInProduct>(), 0.0) { }
+     //   public ProductInOrder() : this(0, "", 0.0, 0, new List<SaleInProduct>(), 0.0) { }
         public override string ToString() => Tools.ToStringProperty(this);
 
 

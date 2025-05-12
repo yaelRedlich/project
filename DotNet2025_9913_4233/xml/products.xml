@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Product>
+    <Id>2</Id>
+    <NameProduct>גבינה</NameProduct>
+    <CategoryName>Dairy</CategoryName>
+    <Price>149.99</Price>
+    <QuantityInStock>26</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>37</Id>
+    <NameProduct>תותים</NameProduct>
+    <CategoryName>Fruits</CategoryName>
+    <Price>19.9</Price>
+    <QuantityInStock>49</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>38</Id>
+    <NameProduct>עגבניות</NameProduct>
+    <CategoryName>Vegetables</CategoryName>
+    <Price>12</Price>
+    <QuantityInStock>68</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>41</Id>
+    <NameProduct>שניצל עוף</NameProduct>
+    <CategoryName>Meat</CategoryName>
+    <Price>56.1</Price>
+    <QuantityInStock>400</QuantityInStock>
+  </Product>
+  <Product>
+    <Id>42</Id>
+    <NameProduct>סלמון טרי</NameProduct>
+    <CategoryName>Fish</CategoryName>
+    <Price>89.9</Price>
+    <QuantityInStock>368</QuantityInStock>
+  </Product>
+</ArrayOfProduct>

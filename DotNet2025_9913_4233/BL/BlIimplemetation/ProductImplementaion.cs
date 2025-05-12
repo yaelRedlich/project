@@ -5,25 +5,31 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace BlIimplemetation
 {
-    internal class ProductImplementaion : BlApi.IProduct
+    public class ProductImplementaion : BlApi.IProduct
     {
+    
         private DalApi.IDal _dal = DalApi.Factory.Get;
 
         public int Create(BO.Product item)
         {
             try
             {
-                return _dal.Product.Create(new DO.Product(item._id, item._nameProduct, (DO.CategoryName)(object)item._category, item._price, item._quantityInStock));
+                return _dal.Product.Create(new DO.Product(item.Id, item.NameProduct, (DO.CategoryName)(object)item.Category, item.Price, item.QuantityInStock));
 
             }
+            catch (DO.DalProductIdExist ex)
+            {
+                throw new BlProductIdExist("The product is out of stock.", ex);
+            }
+           
             catch (DO.DalIdExist ex)
             {
-                throw new BlIdExist("id doesnt exist", ex);
-                throw new DalIdExist("id doesnt exist");
+                throw new BlIdExist("The ID already exists in the system.", ex);
             }
         }
         public bool isExist(int id)
@@ -38,49 +44,53 @@ namespace BlIimplemetation
                 DO.Product p = _dal.Product.Read(id);
                 if (p == null)
                     return null;
-                return new BO.Product(p._id, p._nameProduct, (CategoryName)(int)p._category, p._price, p._quantityInStock,new List<SaleInProduct> ());
+                return new BO.Product(p.Id, p.NameProduct, (CategoryName)(int)p.Category, p.Price, p.QuantityInStock);
 
             }
-            catch (DO.DalIdExist ex)
+            catch (DO.DalNotFoundId ex)
             {
-                throw new BlIdExist("id doesnt exist", ex);
-                throw new DalIdExist("id doesnt exist");
+                throw new BlNotFoundId("There is no such ID in the system.", ex);
             }
         }
 
         public List<BO.Product?> ReadAll(Func<BO.Product, bool>? filter = null)
         {
-
             List<DO.Product?> p = _dal.Product.ReadAll();
-            List<BO.Product> ListProducts = p.Select(c => new BO.Product(c._id, c._nameProduct, (CategoryName)(int)c._category, c._price, c._quantityInStock, new List<SaleInProduct>())).ToList();
-            if (filter != null)
+            List<BO.Product> ListProducts =p.Where(c => c != null).Select(c => new BO.Product(c.Id, c.NameProduct, (CategoryName)(int)c.Category, c.Price, c.QuantityInStock)).ToList();
+            if (filter == null)
                 return ListProducts;
-            else
-                return ListProducts.Where(filter).ToList();
+            Console.WriteLine(ListProducts);
+            return ListProducts.Where(filter).ToList();
 
         }
-        public BO.Product? Read(Func<BO.Product, bool> filter)
+
+
+        public BO.Product? Read(Func<BO.Product, bool> predicate)
         {
+
             List<BO.Product> ProductsBo = ReadAll();
-            return ProductsBo.FirstOrDefault(c => filter(c));
+            return ProductsBo.FirstOrDefault(c => predicate(c));
         }
+
 
         public void Update(BO.Product item)
         {
             try
             {
-                _dal.Product.Create(new DO.Product(item._id, item._nameProduct, (DO.CategoryName)(int)item._category, item._price, item._quantityInStock));
+                _dal.Product.Update(new DO.Product(item.Id, item.NameProduct, (DO.CategoryName)(int)item.Category, item.Price, item.QuantityInStock));
 
+            }
+            catch (DO.DalProductIdExist ex)
+            {
+                throw new BlProductIdExist("The product is out of stock.", ex);
             }
             catch (DalIdExist ex)
             {
-                throw new BlIdExist("id doesnt exist", ex);
-                throw new DalIdExist("id doesnt exist");
+                throw new BlIdExist("The ID already exists in the system.", ex);
             }
             catch (DalNotFoundId ex)
             {
-                throw new BlNotFoundId("not found id", ex);
-                throw new DalNotFoundId("not found id");
+                throw new BlNotFoundId("There is no such ID in the system.", ex);
             }
         }
 
@@ -90,10 +100,10 @@ namespace BlIimplemetation
             {
                 _dal.Product.Delete(id);
             }
-            catch (DO.DalIdExist ex)
+            catch (DO.DalNotFoundId ex)
             {
-                throw new BlIdExist("id doesnt exist", ex);
-                throw new DalIdExist("id doesnt exist");
+                throw new BlNotFoundId("There is no such ID in the system.", ex);
+             
             }
         }
         public void activeSales(ProductInOrder product, bool favorite)

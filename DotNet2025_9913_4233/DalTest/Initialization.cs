@@ -12,11 +12,29 @@ private static IDal s_dal ;
 
     private static void createCustomer()
     {
-        s_dal.Customer.Create(new Customer(123, "0534161926","chazon david 21", "tami"));
+        Console.WriteLine("b createCustomer");
+        try
+        {
+            s_dal.Customer.Create(new Customer(123, "0534161926", "chazon david 21", "tami"));
+            Console.WriteLine("a createCustomer");
+
+        }
+        catch (Exception ex) {
+            Console.WriteLine("not createCustomer");
+
+        }
+
     }
     private static void createSale()
     {
-        s_dal.Sale.Create(new Sale(0,456, 5, 56.9, true, new DateTime(), new DateTime()));
+        try
+        {
+            s_dal.Sale.Create(new Sale(0, 123, 5, 56.9, true, new DateTime(), new DateTime()));
+
+        }
+        catch (Exception ex) {
+            Console.WriteLine("catch");
+        }
     }
 
     private static void createProduct()
@@ -29,8 +47,10 @@ private static IDal s_dal ;
     }
     public static  void initialize()
     {
-      s_dal = DalApi.Factory.Get;  
+        Console.WriteLine("rthg");
+        s_dal = DalApi.Factory.Get;
         createCustomer();
+        Console.WriteLine("createCustomer s");
         createProduct();
         createSale ();
     }

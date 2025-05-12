@@ -1,20 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
+using System.ComponentModel.DataAnnotations;
 
 namespace DO
 {
-    public record Sale(int id,int _productId, int _quantityForSale, double _salePrice, bool _isForClubMembersOnly, DateTime _dateStartSale, DateTime _dateEndSale)
+    public record class Sale
     {
-        private (int id, int _productId, int _quantityForSale, double _salePrice, bool _isForClubMembersOnly, DateTime _dateStartSale, DateTime _dateEndSale) value;
+        [Key]
+        public int id { get; set; }
+        public int _productId { get; set; }
+        public int _quantityForSale { get; set; }
+        public double _salePrice { get; set; }
+        public bool _isForClubMembersOnly { get; set; }
+        public DateTime _dateStartSale { get; set; }
+        public DateTime _dateEndSale { get; set; }
 
-        public Sale():this(0,0,0,0,false,new DateTime(), new DateTime())
-        { 
+        public Sale() { }
+
+        public Sale(int _id, int productId, int quantityForSale, double salePrice, bool isForClubMembersOnly, DateTime dateStartSale, DateTime dateEndSale)
+        {
+            id = _id;
+            _productId = productId;
+            _quantityForSale = quantityForSale;
+            _salePrice = salePrice;
+            _isForClubMembersOnly = isForClubMembersOnly;
+            _dateStartSale = dateStartSale;
+            _dateEndSale = dateEndSale;
         }
-
-
     }
 }
+

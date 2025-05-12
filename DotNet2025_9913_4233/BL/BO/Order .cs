@@ -17,6 +17,12 @@ namespace BO
             this.listProduct = new List <ProductInOrder>();
             this.finalPrice = 0.0;
         }
+        public Order(bool _favoriteCustomer)
+        {
+            this.favoriteCustomer = _favoriteCustomer;
+            this.listProduct = new List<ProductInOrder>();
+            this.finalPrice = 0.0;
+        }
         public Order (bool favoriteCustomer, List < ProductInOrder > listProduct, double finalPrice)
         {
             this.favoriteCustomer = favoriteCustomer;

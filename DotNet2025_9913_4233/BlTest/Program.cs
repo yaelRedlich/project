@@ -7,7 +7,7 @@ public class Program
 
     static void Main()
     {
-        Initialization.initialize();    
+            Initialization.initialize();    
         Console.WriteLine("Welcome to the Order Management System!");
         bool continueRunning = true;
 

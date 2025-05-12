@@ -5,6 +5,7 @@ using DO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 namespace BlIimplemetation
@@ -20,11 +21,14 @@ namespace BlIimplemetation
         {
             return _dal.Sale.Create(SaleDo);
         }
+
         catch (DalIdExist ex)
         {
-            throw new BlIdExist("id doesnt exist", ex);
-            throw new DalIdExist("id doesnt exist");
+            throw new BlIdExist("The ID already exists in the system.", ex);
         }
+           catch (DalProductIdExist ex) {
+                throw new BlProductIdExist("The product is out of stock.", ex);
+           }   
     }
 
     public void Delete(int id)
@@ -35,12 +39,10 @@ namespace BlIimplemetation
         }
         catch (DalNotFoundId ex)
         {
-            throw new BlNotFoundId("not found id", ex);
-            throw new DalNotFoundId("not found id");
+            throw new BlNotFoundId("There is no such ID in the system.", ex);
         }
 
     }
-
 
     public BO.Sale? Read(int id)
     {
@@ -49,12 +51,10 @@ namespace BlIimplemetation
             DO.Sale doSale = _dal.Sale.Read(id);
             if (doSale == null)
                 return null;
-            return new BO.Sale(doSale.id, doSale._productId, doSale._quantityForSale, doSale._salePrice, doSale._isForClubMembersOnly, doSale._dateStartSale, doSale._dateEndSale
-    );
+             return new BO.Sale(doSale.id, doSale._productId, doSale._quantityForSale, doSale._salePrice, doSale._isForClubMembersOnly, doSale._dateStartSale, doSale._dateEndSale);
         }
         catch (DalNotFoundId ex) {
-            throw new BlNotFoundId("not found id", ex);
-            throw new DalNotFoundId("not found id");
+            throw new BlNotFoundId("There is no such ID in the system.", ex);
         }
 
     }
@@ -77,13 +77,17 @@ namespace BlIimplemetation
         }
         catch (DalIdExist ex)
         {
-            throw new BlIdExist("id doesnt exist", ex);
-            throw new DalIdExist("id doesnt exist");
+
+            throw new BlIdExist("The ID already exists in the system.", ex);
         }
         catch (DalNotFoundId ex) {
-            throw new BlNotFoundId("not found id", ex);
-            throw new DalNotFoundId("not found id");
+
+            throw new BlNotFoundId("There is no such ID in the system.", ex);
         }
+        catch (DalProductIdExist ex) {
+
+             throw new BlProductIdExist("The product is out of stock.", ex);
+          }
     }
 
    public BO.Sale? Read(Func<BO.Sale, bool> filter)

@@ -32,3 +32,10 @@ public class BlOutOfStockException : Exception
     public BlOutOfStockException(string message) : base(message) { }
     public BlOutOfStockException(string message, Exception innerException) : base(message, innerException) { }
 }
+
+[Serializable]
+public class BlProductIdExist : Exception
+{
+    public BlProductIdExist(string message) : base(message) { }
+    public BlProductIdExist(string message, Exception innerException) : base(message, innerException) { }
+}

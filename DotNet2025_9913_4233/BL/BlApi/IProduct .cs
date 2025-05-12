@@ -12,6 +12,8 @@ namespace BlApi
         int Create(BO.Product item);
         BO.Product? Read(int id);
         List<BO.Product?> ReadAll(Func<BO.Product, bool>? filter = null);
+        BO.Product? Read(Func<BO.Product, bool> filter);
+
         void Update(BO.Product item);
         void Delete(int id);
        void activeSales (ProductInOrder productId ,bool favorite);
